@@ -5,17 +5,19 @@ function DomElement(selector, height, width, bg, fontSize){
   this.height = height;
   this.width = width;
   this.bg = bg;
-  this.fontSizer = fontSize;
+  this.fontSize = fontSize;
   this.addNewElem = function(text){
     if (this.selector[0] == '.'){
     let newDiv = document.createElement('div');
     newDiv.className = this.selector.slice(1);
     newDiv.innerHTML = text;
-    newDiv.style.height = this.height;
-    newDiv.style.width = this.width;
-     console.log(newDiv.style);
-    newDiv.style.backgroundColor = bg;
-    newDiv.style.backgroundColor = fontSize;
+    // newDiv.style.height = this.height;
+    // newDiv.style.width = this.width;
+    // newDiv.style.backgroundColor = this.bg;
+    // newDiv.style.fontSize = this.fontSize;
+
+    newDiv.style.cssText = 'height:' + this.height + '; width' + this.width + '; background-color:' + this.bg + '; font-size:' + this.fontSize;
+
     document.body.append(newDiv);
   }
 
