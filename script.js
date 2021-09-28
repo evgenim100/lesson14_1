@@ -1,5 +1,4 @@
 'use strict';
- alert('1');
 
 function DomElement(selector, height, width, bg, fontSize){
   this.selector = selector;
